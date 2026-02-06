@@ -1,0 +1,40 @@
+<svg width="360" height="90" viewBox="0 0 360 90" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- ICON BACKGROUND -->
+  <rect x="10" y="15" width="60" height="60" rx="14" fill="#022f4b"/>
+
+  <!-- HS MONOGRAM -->
+  <text x="23" y="55"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="34"
+        font-weight="800"
+        fill="#ffffff"
+        letter-spacing="1">
+    HS
+  </text>
+
+  <!-- NAME TEXT -->
+  <text x="90" y="45"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="28"
+        font-weight="800"
+        fill="#022f4b"
+        letter-spacing="1">
+    HARSHIT
+  </text>
+
+  <text x="90" y="70"
+        font-family="Helvetica, Arial, sans-serif"
+        font-size="20"
+        font-weight="500"
+        fill="#0b63a3"
+        letter-spacing="2">
+    SINGH
+  </text>
+
+  <!-- ACCENT LINE -->
+  <line x1="90" y1="76" x2="260" y2="76"
+        stroke="#9fd3ff"
+        stroke-width="3"
+        stroke-linecap="round"/>
+</svg>

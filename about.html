@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Penguin Travel Agent</title>
+  <style>
+    :root{
+      --blue-dark:#022f4b;
+      --blue-main:#0b63a3;
+      --blue-light:#eaf6ff;
+      --white:#ffffff;
+      --gray:#6b7280;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family: Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--blue-dark);
+      line-height:1.7;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    header{background:white;border-bottom:1px solid #e5eef6}
+    .nav{max-width:1200px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;letter-spacing:1px}
+    .nav a{margin-left:24px;font-weight:600}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:var(--blue-main);color:white}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(90deg,rgba(2,47,75,.9),rgba(2,47,75,.6)),url('./images/About-Hero.jpeg') center/cover no-repeat;
+      color:white;
+      padding:150px 24px 130px;
+    }
+    .hero-inner{max-width:1100px;margin:auto}
+    .hero h1{font-size:56px;margin-bottom:16px}
+    .hero p{font-size:20px;max-width:680px}
+
+    /* MISSION */
+    .mission{padding:100px 24px}
+    .mission-inner{max-width:1000px;margin:auto;text-align:center}
+    .mission h2{font-size:42px;margin-bottom:20px}
+
+    /* VALUES */
+    .values{background:var(--blue-light);padding:100px 24px}
+    .values-grid{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:30px;
+    }
+
+    .value-card{
+      background:white;
+      padding:30px;
+      border-radius:18px;
+      box-shadow:0 12px 30px rgba(2,47,75,0.1);
+    }
+
+    .value-card h3{margin-bottom:12px}
+
+    /* TEAM */
+    .team{padding:100px 24px}
+    .team-inner{max-width:1100px;margin:auto}
+    .team h2{font-size:42px;margin-bottom:30px;text-align:center}
+
+    .team-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:36px;
+    }
+
+    .member{
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 14px 36px rgba(2,47,75,0.12);
+      text-align:center;
+    }
+
+    .member img{width:100%;height:400px;object-fit:cover}
+    .member-content{padding:24px}
+    .member-content h4{margin-bottom:6px}
+    .member-content p{color:var(--gray);font-size:14px}
+
+    /* SUSTAINABILITY */
+    .sustainability{background:var(--blue-light);padding:100px 24px}
+    .sustain-inner{max-width:1000px;margin:auto;text-align:center}
+    .sustainability h2{font-size:42px;margin-bottom:20px}
+
+    /* CTA */
+    .cta{
+      background:var(--blue-dark);
+      color:white;
+      padding:90px 24px;
+      text-align:center;
+    }
+
+    .cta h2{font-size:42px;margin-bottom:16px}
+
+    /* FOOTER */
+    footer{padding:40px 24px;background:#011f33;color:#9fbcd3;text-align:center;font-size:14px}
+
+    @media(max-width:900px){
+      .hero h1{font-size:42px}
+    }
+
+    /* PHASE 3 — MOBILE POLISH */
+    @media(max-width:768px){
+      body{line-height:1.65}
+      .nav{padding:14px 16px;flex-wrap:wrap;gap:10px}
+      .nav a{margin-left:0;margin-right:12px}
+      .logo{font-size:14px}
+      .btn{padding:14px 18px}
+
+      .hero{padding:110px 16px 90px}
+      .hero h1{font-size:34px}
+      .hero p{font-size:16px}
+
+      .mission,.values,.team,.sustainability{padding:70px 16px}
+      .mission h2,.team h2,.sustainability h2{font-size:30px}
+
+      .values-grid{gap:18px}
+      .value-card{padding:22px}
+
+      .team-grid{gap:22px}
+      .member img{height:220px}
+
+      .cta{padding:70px 16px}
+      .cta h2{font-size:32px}
+    }
+  
+    /* PHASE 2 ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(30px);transition:all .8s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    .btn{
+      transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 30px rgba(2,47,75,0.25);
+    }
+
+    .value-card,.member{
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .value-card:hover,.member:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px rgba(2,47,75,0.18);
+    }
+  </style>
+<link rel="stylesheet" href="./style.css">
+  <script src="./penguin.js"></script>
+</head>
+<body>
+<header>
+  <div id="header-placeholder"></div>
+</header>
+
+<section class="hero fade-in">
+  <div class="hero-inner">
+    <h1>About Penguin Travel Agent</h1>
+    <p>We don’t sell vacations. We design Antarctic expeditions that test courage, build respect for nature, and leave no trace behind.</p>
+  </div>
+</section>
+
+<section class="mission fade-in">
+  <div class="mission-inner">
+    <h2>Our Mission</h2>
+    <p>To guide people through Antarctica responsibly — helping them face fear, experience silence, and return transformed, while preserving the last great wilderness on Earth.</p>
+  </div>
+</section>
+
+<section class="values fade-in">
+  <div class="values-grid">
+    <div class="value-card"><h3>Courage</h3><p>We believe growth begins beyond comfort zones.</p></div>
+    <div class="value-card"><h3>Respect</h3><p>For Antarctica, its wildlife, and its silence.</p></div>
+    <div class="value-card"><h3>Safety</h3><p>Daring experiences designed with professional precision.</p></div>
+    <div class="value-card"><h3>Sustainability</h3><p>Low-impact travel that protects future generations.</p></div>
+  </div>
+</section>
+
+<section class="team fade-in">
+  <div class="team-inner">
+    <h2>Our Team</h2>
+    <div class="team-grid">
+      <div class="member">
+        <img src="./images/penguin-guide.jpg" alt="Penguin Guide">
+        <div class="member-content">
+          <h4>The Penguin</h4>
+          <p>Lead Guide · Antarctica</p>
+        </div>
+      </div>
+      <div class="member">
+        <img src="./images/ExpeditionLeader.png" alt="Expedition Leader">
+        <div class="member-content">
+          <h4>Expedition Leader</h4>
+          <p>Certified Polar Guide</p>
+        </div>
+      </div>
+      <div class="member">
+        <img src="./images/SafetyOfficer.png" alt="Safety Officer">
+        <div class="member-content">
+          <h4>Safety Officer</h4>
+          <p>Emergency & Medical Support</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sustainability fade-in">
+  <div class="sustain-inner">
+    <h2>Our Commitment to Antarctica</h2>
+    <p>Every expedition follows international Antarctic conservation protocols. We leave no trace, respect wildlife boundaries, and educate every traveler before they step onto the ice.</p>
+  </div>
+</section>
+
+<section class="cta fade-in">
+  <h2>Travel With Purpose</h2>
+  <p>Antarctica demands respect. We make sure it receives it.</p>
+  <br>
+  <a  href="./tours.html"class="btn btn-primary">Explore Tours</a>
+</section>
+
+<footer>
+  © 2026 Harshit Singh · About Us
+</footer>
+
+<script>
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Expert-guided Antarctic adventure tours led by the Penguin. Safe, daring, and eco-responsible expeditions in Antarctica." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Support | Penguin Travel Agent</title>
+  <style>
+    :root{
+      --blue-dark:#022f4b;
+      --blue-main:#0b63a3;
+      --blue-light:#eaf6ff;
+      --white:#ffffff;
+      --gray:#6b7280;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family: Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--blue-dark);
+      line-height:1.7;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    header{background:white;border-bottom:1px solid #e5eef6}
+    .nav{max-width:1200px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;letter-spacing:1px}
+    .nav a{margin-left:24px;font-weight:600}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:var(--blue-main);color:white}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(90deg,rgba(2,47,75,.85),rgba(2,47,75,.6)),url('./images/Contact\ and\ Support.jpg') center/cover no-repeat;
+      color:white;
+      padding:140px 24px 120px;
+    }
+    .hero-inner{max-width:1100px;margin:auto}
+    .hero h1{font-size:54px;margin-bottom:16px}
+    .hero p{font-size:20px;max-width:650px}
+
+    /* CONTACT */
+    .contact{padding:100px 24px}
+    .contact-inner{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:1.3fr 1fr;
+      gap:60px;
+    }
+
+    form{
+      background:white;
+      padding:40px;
+      border-radius:18px;
+      box-shadow:0 14px 40px rgba(2,47,75,0.12);
+    }
+
+    form h2{font-size:32px;margin-bottom:24px}
+    label{display:block;font-weight:600;margin-bottom:6px}
+
+    input,select,textarea{
+      width:100%;
+      padding:14px;
+      margin-bottom:20px;
+      border-radius:8px;
+      border:1px solid #d6e7f5;
+      font-size:15px;
+    }
+
+    textarea{resize:none}
+
+    /* INFO */
+    .info{
+      background:var(--blue-light);
+      padding:36px;
+      border-radius:18px;
+    }
+
+    .info h3{margin-bottom:18px}
+    .info p{margin-bottom:12px}
+
+    .info ul{list-style:none;margin-top:20px}
+    .info li{margin-bottom:12px;font-weight:600}
+
+    /* FAQ */
+    .faq{
+      background:var(--blue-light);
+      padding:100px 24px;
+    }
+
+    .faq-inner{max-width:900px;margin:auto}
+    .faq h2{font-size:40px;margin-bottom:30px;text-align:center}
+
+    .faq-item{background:white;padding:26px;border-radius:16px;margin-bottom:18px;box-shadow:0 10px 28px rgba(2,47,75,0.1)}
+    .faq-item h4{margin-bottom:8px}
+
+    /* CTA */
+    .cta{
+      background:var(--blue-dark);
+      color:white;
+      padding:90px 24px;
+      text-align:center;
+    }
+
+    .cta h2{font-size:42px;margin-bottom:16px}
+
+    /* FOOTER */
+    footer{padding:40px 24px;background:#011f33;color:#9fbcd3;text-align:center;font-size:14px}
+
+    @media(max-width:900px){
+      .contact-inner{grid-template-columns:1fr}
+      .hero h1{font-size:42px}
+    }
+
+    /* PHASE 3 — MOBILE POLISH */
+    @media(max-width:768px){
+      body{line-height:1.65}
+
+      .nav{padding:12px 16px;flex-wrap:wrap;gap:8px}
+      .logo{font-size:14px}
+      .nav a{margin-left:0;margin-right:12px}
+      .btn{padding:14px 18px}
+
+      .hero{padding:110px 16px 90px}
+      .hero h1{font-size:34px;line-height:1.15}
+      .hero p{font-size:16px}
+
+      .contact{padding:64px 16px}
+      form{padding:28px}
+      form h2{font-size:26px}
+      input,select,textarea{font-size:16px}
+
+      .info{padding:24px}
+      .info h3{font-size:20px}
+
+      .faq{padding:64px 16px}
+      .faq h2{font-size:30px}
+      .faq-item{padding:22px}
+
+      .cta{padding:64px 16px}
+      .cta h2{font-size:30px}
+    }
+      .hero h1{font-size:42px}
+    
+  
+    /* PHASE 2 ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(30px);transition:all .8s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    .btn{
+      transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 30px rgba(2,47,75,0.25);
+    }
+
+    .info, form, .faq-item{
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .info:hover, form:hover, .faq-item:hover{
+      transform:translateY(-4px);
+      box-shadow:0 18px 40px rgba(2,47,75,0.18);
+    }
+  </style>
+<link rel="stylesheet" href="./style.css">
+  <script src="./penguin.js"></script>
+</head>
+<body>
+
+<header>
+  <div id="header-placeholder"></div>
+</header>
+<section class="hero fade-in">
+  <div class="hero-inner">
+    <h1>Contact & Support</h1>
+    <p>Questions before the ice? Our team — and the Penguin — are here to help.</p>
+  </div>
+</section>
+
+<section class="contact fade-in">
+  <div class="contact-inner">
+
+  <form
+  name="contact"
+  method="POST"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field"
+  action="/thanks.html">
+
+  <input type="hidden" name="form-name" value="contact">
+
+  <p hidden>
+    <label>Don’t fill this out: <input name="bot-field"></label>
+  </p>
+
+  <label>Name</label>
+  <input type="text" name="name" required>
+
+  <label>Email</label>
+  <input type="email" name="email" required>
+
+  <label>Message</label>
+  <textarea name="message" required></textarea>
+  <button class="btn btn-primary" style="width:100%" type="submit">Send Message</button>
+    </form>
+
+    <div class="info">
+      <h3>Support Information</h3>
+      <p><strong>Email:</strong> support@penguintravelagent.com</p>
+      <p><strong>Response Time:</strong> Within 24 hours</p>
+      <p><strong>Office Hours:</strong> Mon–Fri, 9 AM – 6 PM (GMT)</p>
+
+      <ul>
+        <li>✔ Dedicated expedition support</li>
+        <li>✔ Safety-first consultation</li>
+        <li>✔ Honest advice before booking</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="faq fade-in">
+  <div class="faq-inner">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <h4>Is prior adventure experience required?</h4>
+      <p>No. We offer tours for different difficulty levels. Preparation guidance is provided.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Are these tours safe?</h4>
+      <p>Yes. All expeditions follow strict safety protocols with trained professionals.</p>
+    </div>
+
+    <div class="faq-item">
+      <h4>Can I cancel or reschedule?</h4>
+      <p>Yes. Cancellation and rescheduling policies depend on weather and preparation stages.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta fade-in">
+  <h2>The Ice Awaits</h2>
+  <p>Reach out. Prepare properly. Then go.</p>
+  <br>
+  <a href="./tours.html" class="btn btn-primary">Explore Tours</a>
+</section>
+
+<footer>
+  © 2026 Harshit Singh · Support & Assistance
+</footer>
+
+<script>
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Expert-guided Antarctic adventure tours led by the Penguin. Safe, daring, and eco-responsible expeditions in Antarctica." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Your Adventure | Penguin Travel Agent</title>
+  <style>
+    :root{
+      --blue-dark:#022f4b;
+      --blue-main:#0b63a3;
+      --blue-light:#eaf6ff;
+      --white:#ffffff;
+      --gray:#6b7280;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family: Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--blue-dark);
+      line-height:1.6;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    header{background:white;border-bottom:1px solid #e5eef6}
+    .nav{max-width:1200px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;letter-spacing:1px}
+    .nav a{margin-left:24px;font-weight:600}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:var(--blue-main);color:white}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(90deg,rgba(2,47,75,.9),rgba(2,47,75,.6)),url('./images/Booking-Hero.jpg') center/cover no-repeat;
+      color:white;
+      padding:130px 24px 110px;
+    }
+    .hero-inner{max-width:1100px;margin:auto}
+    .hero h1{font-size:54px;margin-bottom:16px}
+    .hero p{font-size:20px;max-width:650px}
+
+    /* BOOKING */
+    .booking{padding:100px 24px}
+    .booking-inner{
+      max-width:1100px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:2fr 1fr;
+      gap:50px;
+    }
+
+    form{
+      background:white;
+      padding:40px;
+      border-radius:18px;
+      box-shadow:0 14px 40px rgba(2,47,75,0.12);
+    }
+
+    form h2{font-size:32px;margin-bottom:24px}
+
+    label{display:block;font-weight:600;margin-bottom:6px}
+
+    input,select,textarea{
+      width:100%;
+      padding:14px;
+      margin-bottom:20px;
+      border-radius:8px;
+      border:1px solid #d6e7f5;
+      font-size:15px;
+    }
+
+    textarea{resize:none}
+
+    /* INFO PANEL */
+    .info{
+      background:var(--blue-light);
+      padding:36px;
+      border-radius:18px;
+    }
+
+    .info h3{margin-bottom:16px}
+    .info ul{list-style:none}
+    .info li{margin-bottom:12px;font-weight:600}
+
+    /* STEPS */
+    .steps{
+      background:var(--blue-light);
+      padding:100px 24px;
+    }
+
+    .steps-inner{max-width:1000px;margin:auto;text-align:center}
+    .steps h2{font-size:40px;margin-bottom:20px}
+
+    .step-grid{
+      margin-top:50px;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:30px;
+    }
+
+    .step{
+      background:white;
+      padding:30px;
+      border-radius:16px;
+      box-shadow:0 12px 30px rgba(2,47,75,0.1);
+    }
+
+    /* CTA */
+    .cta{
+      background:var(--blue-dark);
+      color:white;
+      padding:90px 24px;
+      text-align:center;
+    }
+
+    .cta h2{font-size:42px;margin-bottom:16px}
+
+    /* FOOTER */
+    footer{padding:40px 24px;background:#011f33;color:#9fbcd3;text-align:center;font-size:14px}
+
+    @media(max-width:900px){
+      .booking-inner{grid-template-columns:1fr}
+      .hero h1{font-size:42px}
+    }
+
+    /* PHASE 3 — MOBILE POLISH */
+    @media(max-width:768px){
+      body{line-height:1.65}
+
+      .nav{padding:12px 16px;flex-wrap:wrap;gap:8px}
+      .logo{font-size:14px}
+      .nav a{margin-left:0;margin-right:12px}
+      .btn{padding:14px 18px}
+
+      .hero{padding:110px 16px 90px}
+      .hero h1{font-size:34px;line-height:1.15}
+      .hero p{font-size:16px}
+
+      .booking{padding:64px 16px}
+      form{padding:28px}
+      form h2{font-size:26px}
+
+      input,select,textarea{font-size:16px}
+
+      .info{padding:24px}
+      .info h3{font-size:20px}
+
+      .steps{padding:64px 16px}
+      .steps h2{font-size:30px}
+      .step-grid{gap:18px}
+      .step{padding:22px}
+
+      .cta{padding:64px 16px}
+      .cta h2{font-size:30px}
+    }
+      .hero h1{font-size:42px}
+    
+  
+    /* PHASE 2 ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(30px);transition:all .8s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    .btn{
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 30px rgba(2,47,75,0.25);
+    }
+
+    form,.info,.step{
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    form:hover,.info:hover,.step:hover{
+      transform:translateY(-5px);
+      box-shadow:0 18px 40px rgba(2,47,75,0.18);
+    }
+  </style>
+<link rel="stylesheet" href="./style.css">
+  <script src="./penguin.js"></script>
+</head>
+<body>
+
+<header>
+  <div id="header-placeholder"></div>
+</header>
+
+<section class="hero fade-in">
+  <div class="hero-inner">
+    <h1>Book Your Antarctic Adventure</h1>
+    <p>This is not a casual vacation. Submit your booking request and prepare to face Antarctica under expert guidance.</p>
+  </div>
+</section>
+
+<section class="booking fade-in">
+  <div class="booking-inner">
+
+    <form
+  name="booking"
+  method="POST"
+  action="/thanks.html"
+  data-netlify="true"
+  data-netlify-honeypot="bot-field">
+
+  <!-- REQUIRED FOR NETLIFY -->
+  <input type="hidden" name="form-name" value="booking">
+
+  <!-- HONEYPOT -->
+  <p hidden>
+    <label>Don’t fill this out: <input name="bot-field"></label>
+  </p>
+
+  <h2>Booking Request</h2>
+
+  <label>
+    Full Name
+    <input type="text" name="full_name" placeholder="Your full name" required>
+  </label>
+
+  <label>
+    Email Address
+    <input type="email" name="email" placeholder="you@example.com" required>
+  </label>
+
+  <label>
+    Phone Number
+    <input type="tel" name="phone" placeholder="+91 XXXXX XXXXX">
+  </label>
+
+  <label>
+    Select Tour Package
+    <select name="tour[]" multiple required>
+      <option>Midnight Glacier Challenge</option>
+      <option>Penguin Polar Plunge</option>
+      <option>Antarctic Science & Story Trail</option>
+    </select>
+  </label>
+
+  <label>
+    Preferred Start Date
+    <input type="date" name="start_date" required>
+  </label>
+
+  <label>
+    Number of Travelers
+    <select name="travellers">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4+</option>
+    </select>
+  </label>
+
+  <label>
+    Medical / Special Notes
+    <textarea name="notes" rows="4"
+      placeholder="Mention any medical conditions or special requirements"></textarea>
+  </label>
+
+  <button class="btn btn-primary" style="width:100%" type="submit">
+    Submit Booking Request
+  </button>
+</form>
+
+    <div class="info">
+      <h3>Before You Book</h3>
+      <ul>
+        <li>✔ Small expedition groups only</li>
+        <li>✔ Medical clearance may be required</li>
+        <li>✔ All tours are weather-dependent</li>
+        <li>✔ Antarctica conservation rules apply</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="steps fade-in">
+  <div class="steps-inner">
+    <h2>What Happens Next?</h2>
+    <p>Our process is simple, transparent, and safety-first.</p>
+
+    <div class="step-grid">
+      <div class="step"><h4>1. Request Review</h4><p>We review your booking details.</p></div>
+      <div class="step"><h4>2. Confirmation Call</h4><p>Our team contacts you personally.</p></div>
+      <div class="step"><h4>3. Preparation Guide</h4><p>Receive gear & fitness guidance.</p></div>
+      <div class="step"><h4>4. Face Antarctica</h4><p>Your expedition begins.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta fade-in">
+  <h2>The Ice Is Waiting.</h2>
+  <p>And the Penguin does not like hesitation.</p>
+  <br>
+  <a href="./tours.html" class="btn btn-primary">Explore Tours</a>
+</section>
+
+<footer>
+  © 2026 Harshit Singh · Booking Requests Subject to Approval
+</footer>
+
+<script>
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

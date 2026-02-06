@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Expert-guided Antarctic adventure tours led by the Penguin. Safe, daring, and eco-responsible expeditions in Antarctica." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Traveler Stories | Penguin Travel Agent</title>
+  <style>
+    :root{
+      --blue-dark:#022f4b;
+      --blue-main:#0b63a3;
+      --blue-light:#eaf6ff;
+      --white:#ffffff;
+      --gray:#6b7280;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family: Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--blue-dark);
+      line-height:1.6;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    header{background:white;border-bottom:1px solid #e5eef6}
+    .nav{max-width:1200px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;letter-spacing:1px}
+    .nav a{margin-left:24px;font-weight:600}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:var(--blue-main);color:white}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(90deg,rgba(2,47,75,.85),rgba(2,47,75,.6)),url('./images/Testimonial.jpeg') center/cover no-repeat;
+      color:white;
+      padding:140px 24px 120px;
+    }
+    .hero-inner{max-width:1100px;margin:auto}
+    .hero h1{font-size:54px;margin-bottom:16px}
+    .hero p{font-size:20px;max-width:650px}
+
+    /* TESTIMONIALS */
+    .testimonials{padding:100px 24px}
+    .testi-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:32px;
+    }
+
+    .testi-card{
+      background:white;
+      padding:32px;
+      border-radius:18px;
+      box-shadow:0 14px 40px rgba(2,47,75,0.12);
+    }
+
+    .stars{color:#fbbf24;font-size:18px;margin-bottom:10px}
+    .testi-card p{font-size:17px;margin-bottom:16px}
+    .author{font-weight:700}
+    .meta{color:var(--gray);font-size:14px}
+
+    /* STATS */
+    .stats{
+      background:var(--blue-light);
+      padding:80px 24px;
+    }
+
+    .stats-inner{
+      max-width:1000px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:28px;
+      text-align:center;
+    }
+
+    .stat h2{font-size:42px;color:var(--blue-main)}
+    .stat p{font-weight:600}
+
+    /* CTA */
+    .cta{
+      background:var(--blue-dark);
+      color:white;
+      padding:90px 24px;
+      text-align:center;
+    }
+
+    .cta h2{font-size:42px;margin-bottom:16px}
+
+    /* FOOTER */
+    footer{padding:40px 24px;background:#011f33;color:#9fbcd3;text-align:center;font-size:14px}
+
+    @media(max-width:900px){
+      .hero h1{font-size:42px}
+    }
+
+    /* PHASE 3 — MOBILE POLISH */
+    @media(max-width:768px){
+      body{line-height:1.65}
+
+      .nav{padding:12px 16px;flex-wrap:wrap;gap:8px}
+      .logo{font-size:14px}
+      .nav a{margin-left:0;margin-right:12px}
+      .btn{padding:14px 18px}
+
+      .hero{padding:110px 16px 90px}
+      .hero h1{font-size:34px;line-height:1.15}
+      .hero p{font-size:16px}
+
+      .testimonials{padding:64px 16px}
+      .testi-grid{gap:20px}
+      .testi-card{padding:24px}
+      .testi-card p{font-size:16px}
+
+      .stats{padding:64px 16px}
+      .stat h2{font-size:30px}
+
+      .cta{padding:64px 16px}
+      .cta h2{font-size:30px}
+    }
+  
+    /* PHASE 2 ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(30px);transition:all .8s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    .btn{
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 30px rgba(2,47,75,0.25);
+    }
+
+    .testi-card,.stat{
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .testi-card:hover,.stat:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px rgba(2,47,75,0.18);
+    }
+  </style>
+<link rel="stylesheet" href="./style.css">
+  <script src="./penguin.js"></script>
+</head>
+<body>
+
+<header>
+  <div id="header-placeholder"></div>
+</header>
+
+<section class="hero fade-in">
+  <div class="hero-inner">
+    <h1>Stories from the Ice</h1>
+    <p>Real experiences from travelers who followed the Penguin into Antarctica — and came back changed.</p>
+  </div>
+</section>
+
+<section class="testimonials fade-in">
+  <div class="testi-grid">
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>“The Penguin pushed me beyond fear, but never beyond safety. Standing on a glacier at midnight changed how I see myself.”</p>
+      <div class="author">Aisha Verma</div>
+      <div class="meta">India · Midnight Glacier Challenge</div>
+    </div>
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>“This wasn’t tourism. This was transformation. Every step felt intentional, respectful, and powerful.”</p>
+      <div class="author">Lucas Meyer</div>
+      <div class="meta">Germany · Antarctic Science Trail</div>
+    </div>
+
+    <div class="testi-card">
+      <div class="stars">★★★★★</div>
+      <p>“I never thought I’d willingly jump into Antarctic waters. The Penguin made me believe I could.”</p>
+      <div class="author">Keiko Tanaka</div>
+      <div class="meta">Japan · Penguin Polar Plunge</div>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats fade-in">
+  <div class="stats-inner">
+    <div class="stat"><h2>1,200+</h2><p>Travelers Guided</p></div>
+    <div class="stat"><h2>4.9/5</h2><p>Average Rating</p></div>
+    <div class="stat"><h2>100%</h2><p>Safety Record</p></div>
+  </div>
+</section>
+
+<section class="cta fade-in">
+  <h2>Ready to Write Your Own Story?</h2>
+  <p>The ice remembers those who dared.</p>
+  <br>
+  <a href="./tours.html" class="btn btn-primary">Explore Tours</a>
+</section>
+
+<footer>
+  © 2026 Harshit Singh · Real Stories · Real Courage
+</footer>
+
+<script>
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

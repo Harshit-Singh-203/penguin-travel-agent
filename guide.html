@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Expert-guided Antarctic adventure tours led by the Penguin. Safe, daring, and eco-responsible expeditions in Antarctica." />
+  <title>Meet the Guide | Penguin Travel Agent</title>
+  <style>
+    :root{
+      --blue-dark:#022f4b;
+      --blue-main:#0b63a3;
+      --blue-light:#eaf6ff;
+      --white:#ffffff;
+      --gray:#6b7280;
+    }
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{
+      font-family: Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--blue-dark);
+      line-height:1.6;
+    }
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    header{background:white;border-bottom:1px solid #e5eef6}
+    .nav{max-width:1200px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;letter-spacing:1px}
+    .nav a{margin-left:24px;font-weight:600}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:var(--blue-main);color:white}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(90deg,rgba(2,47,75,.85),rgba(2,47,75,.6)),url('./images/guide\ penguine.jpeg') center/cover no-repeat;
+      color:white;
+      padding:140px 24px 120px;
+    }
+    .hero-inner{max-width:1100px;margin:auto}
+    .hero h1{font-size:56px;margin-bottom:16px}
+    .hero p{font-size:20px;max-width:620px}
+
+    /* STORY */
+    .story{padding:100px 24px}
+    .story-inner{max-width:1000px;margin:auto}
+    .story h2{font-size:42px;margin-bottom:20px}
+    .story p{margin-bottom:16px;color:#334155}
+
+    /* PHILOSOPHY */
+    .philosophy{background:var(--blue-light);padding:100px 24px}
+    .phil-grid{max-width:1100px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+    .phil-card{background:white;padding:30px;border-radius:16px;box-shadow:0 12px 30px rgba(2,47,75,0.1)}
+    .phil-card h3{margin-bottom:12px}
+
+    /* RULES */
+    .rules{padding:100px 24px}
+    .rules-inner{max-width:900px;margin:auto}
+    .rules h2{font-size:40px;margin-bottom:24px}
+    .rules ul{list-style:none}
+    .rules li{padding:14px 0;border-bottom:1px solid #e5eef6;font-weight:600}
+
+    /* QUOTE */
+    .quote{background:linear-gradient(90deg,#022f4b,#0b63a3);color:white;padding:100px 24px;text-align:center}
+    .quote blockquote{font-size:30px;font-style:italic;max-width:800px;margin:auto}
+
+    /* CTA */
+    .cta{padding:90px 24px;text-align:center}
+    .cta h2{font-size:42px;margin-bottom:16px}
+
+    /* FOOTER */
+    footer{padding:40px 24px;background:#011f33;color:#9fbcd3;text-align:center;font-size:14px}
+
+    @media(max-width:900px){
+      .hero h1{font-size:42px}
+    }
+
+    /* PHASE 3 — MOBILE POLISH */
+    @media(max-width:768px){
+      body{line-height:1.65}
+
+      .nav{padding:12px 16px;flex-wrap:wrap;gap:8px}
+      .logo{font-size:14px}
+      .nav a{margin-left:0;margin-right:12px}
+      .btn{padding:14px 18px}
+
+      .hero{padding:110px 16px 90px}
+      .hero h1{font-size:34px;line-height:1.15}
+      .hero p{font-size:16px}
+
+      .story,.philosophy,.rules,.quote,.cta{padding:64px 16px}
+      .story h2,.rules h2,.cta h2{font-size:30px}
+
+      .phil-grid{gap:18px}
+      .phil-card{padding:22px}
+
+      .quote blockquote{font-size:22px}
+    }
+    
+  
+    /* PHASE 2 ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(30px);transition:all .8s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    .btn{
+      transition:transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 30px rgba(2,47,75,0.25);
+    }
+
+    .phil-card,.rules li{
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .phil-card:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px rgba(2,47,75,0.18);
+    }
+  </style>
+<link rel="stylesheet" href="./style.css">
+  <script src="./penguin.js"></script>
+</head>
+<body>
+
+<header>
+  <div id="header-placeholder"></div>
+</header>
+<section class="hero fade-in">
+  <div class="hero-inner">
+    <h1>Meet Your Guide</h1>
+    <p>Not a mascot. Not a myth. A born Antarctic navigator who believes courage is learned on ice.</p>
+  </div>
+</section>
+
+<section class="story fade-in">
+  <div class="story-inner">
+    <h2>The Penguin</h2>
+    <p>Born in Antarctica’s unforgiving silence, the Penguin has spent a lifetime navigating glaciers, storms, and endless white horizons. While humans plan routes, the Penguin feels them.</p>
+    <p>At Penguin Travel Agent, the Penguin is not decoration — he is philosophy. He leads not by force, but by example, showing travelers how to face fear calmly and respectfully.</p>
+  </div>
+</section>
+
+<section class="philosophy fade-in">
+  <div class="phil-grid">
+    <div class="phil-card"><h3>Courage Over Comfort</h3><p>Growth begins where comfort disappears.</p></div>
+    <div class="phil-card"><h3>Nature Above Ego</h3><p>Antarctica is not conquered. It is respected.</p></div>
+    <div class="phil-card"><h3>Daring, Not Reckless</h3><p>Every challenge is calculated and supported.</p></div>
+  </div>
+</section>
+
+<section class="rules fade-in">
+  <div class="rules-inner">
+    <h2>The Penguin’s Rules</h2>
+    <ul>
+      <li>Respect the ice.</li>
+      <li>Respect the wildlife.</li>
+      <li>Face fear, not foolishness.</li>
+      <li>Leave no trace.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="quote fade-in">
+  <blockquote>
+    “Anyone can sell a trip. I sell courage.”
+  </blockquote>
+</section>
+
+<section class="cta fade-in">
+  <h2>Ready to Follow the Penguin?</h2>
+  <p>Antarctica does not forgive hesitation.</p>
+  <br>
+  <a href="./tours.html" class="btn btn-primary">View Tours</a>
+</section>
+
+<footer>
+  © 2026 Harshit Singh · Guided Antarctic Expeditions
+</footer>
+
+<script>
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>

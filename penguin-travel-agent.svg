@@ -1,0 +1,36 @@
+ <svg width="160" height="40" viewBox="0 0 160 40" xmlns="http://www.w3.org/2000/svg">
+  <!-- Badge -->
+  <circle cx="20" cy="20" r="18" fill="#0b63a3"/>
+  <circle cx="20" cy="20" r="16" fill="#022f4b"/>
+
+  <!-- Penguin Body -->
+  <ellipse cx="20" cy="22" rx="7" ry="10" fill="#ffffff"/>
+  <ellipse cx="20" cy="24" rx="4" ry="7" fill="#eaf6ff"/>
+
+  <!-- Head -->
+  <circle cx="20" cy="12" r="6" fill="#ffffff"/>
+
+  <!-- Eyes -->
+  <circle cx="18" cy="12" r="1" fill="#022f4b"/>
+  <circle cx="22" cy="12" r="1" fill="#022f4b"/>
+
+  <!-- Beak -->
+  <polygon points="20,14 19,16 21,16" fill="#facc15"/>
+
+  <!-- Ice line -->
+  <path d="M8 30 Q20 26 32 30" stroke="#9fd3ff" stroke-width="2" fill="none"/>
+
+  <!-- Text -->
+  <text x="45" y="17" font-family="Helvetica, Arial, sans-serif"
+        font-size="12" font-weight="800" fill="#022f4b">
+    PENGUIN 
+  </text>
+  <text x="45" y="31" font-family="Helvetica, Arial, sans-serif"
+        font-size="10" font-weight="600" fill="#0b63a3">
+    TRAVEL AGENT
+  </text>
+  <text x="45" y="40" font-family="Helvetica, Arial, sans-serif"
+        font-size="7" font-weight="600" fill="#0b63a3">
+  (H.S)
+  </text>
+</svg>

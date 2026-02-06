@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Expert-guided Antarctic adventure tours led by the Penguin. Safe, daring, and eco-responsible expeditions in Antarctica." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stories & Insights | Penguin Travel Agent</title>
+  <style>
+    :root{
+      --blue-dark:#022f4b;
+      --blue-main:#0b63a3;
+      --blue-light:#eaf6ff;
+      --white:#ffffff;
+      --gray:#6b7280;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+
+    body{
+      font-family: Helvetica, Arial, sans-serif;
+      background: var(--white);
+      color: var(--blue-dark);
+      line-height:1.7;
+    }
+
+    a{text-decoration:none;color:inherit}
+
+    /* NAV */
+    header{background:white;border-bottom:1px solid #e5eef6}
+    .nav{max-width:1200px;margin:auto;padding:20px 24px;display:flex;justify-content:space-between;align-items:center}
+    .logo{font-weight:800;letter-spacing:1px}
+    .nav a{margin-left:24px;font-weight:600}
+    .btn{padding:12px 20px;border-radius:8px;font-weight:700;border:none;cursor:pointer}
+    .btn-primary{background:var(--blue-main);color:white}
+
+    /* HERO */
+    .hero{
+      background:linear-gradient(90deg,rgba(2,47,75,.85),rgba(2,47,75,.6)),url('./images/Blog-Hero.jpeg') center/cover no-repeat;
+      color:white;
+      padding:140px 24px 120px;
+    }
+    .hero-inner{max-width:1100px;margin:auto}
+    .hero h1{font-size:54px;margin-bottom:16px}
+    .hero p{font-size:20px;max-width:650px}
+
+    /* BLOG GRID */
+    .blog{padding:100px 24px}
+    .blog-grid{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+      gap:36px;
+    }
+
+    .post{
+      background:white;
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:0 14px 40px rgba(2,47,75,0.12);
+      display:flex;
+      flex-direction:column;
+    }
+
+    .post img{width:100%;height:220px;object-fit:cover}
+
+    .post-content{padding:28px;flex:1}
+
+    .tag{
+      display:inline-block;
+      background:var(--blue-light);
+      color:var(--blue-main);
+      padding:6px 14px;
+      border-radius:999px;
+      font-size:12px;
+      font-weight:700;
+      margin-bottom:12px;
+    }
+
+    .post-content h3{margin-bottom:12px;font-size:22px}
+    .post-content p{color:#334155;margin-bottom:20px}
+    .meta{font-size:14px;color:var(--gray)}
+
+    /* NEWSLETTER */
+    .newsletter{
+      background:var(--blue-light);
+      padding:90px 24px;
+      text-align:center;
+    }
+
+    .newsletter h2{font-size:40px;margin-bottom:16px}
+
+    .newsletter form{
+      max-width:500px;
+      margin:30px auto 0;
+      display:flex;
+      gap:12px;
+    }
+
+    .newsletter input{
+      flex:1;
+      padding:14px;
+      border-radius:8px;
+      border:1px solid #cfe3f5;
+      font-size:15px;
+    }
+
+    /* CTA */
+    .cta{
+      background:var(--blue-dark);
+      color:white;
+      padding:90px 24px;
+      text-align:center;
+    }
+
+    .cta h2{font-size:42px;margin-bottom:16px}
+
+    /* FOOTER */
+    footer{padding:40px 24px;background:#011f33;color:#9fbcd3;text-align:center;font-size:14px}
+
+    @media(max-width:900px){
+      .hero h1{font-size:42px}
+      .newsletter form{flex-direction:column}
+    }
+
+    /* PHASE 3 — MOBILE POLISH */
+    @media(max-width:768px){
+      body{line-height:1.65}
+
+      .nav{padding:12px 16px;flex-wrap:wrap;gap:8px}
+      .logo{font-size:14px}
+      .nav a{margin-left:0;margin-right:12px}
+      .btn{padding:14px 18px}
+
+      .hero{padding:110px 16px 90px}
+      .hero h1{font-size:34px;line-height:1.15}
+      .hero p{font-size:16px}
+
+      .blog{padding:64px 16px}
+      .blog-grid{gap:20px}
+      .post img{height:180px}
+      .post-content{padding:22px}
+      .post-content h3{font-size:20px}
+      .post-content p{font-size:16px}
+
+      .newsletter{padding:64px 16px}
+      .newsletter h2{font-size:30px}
+      .newsletter form{gap:10px}
+
+      .cta{padding:64px 16px}
+      .cta h2{font-size:30px}
+    }
+      .newsletter form{flex-direction:column}
+  
+    /* PHASE 2 ANIMATIONS */
+    .fade-in{opacity:0;transform:translateY(30px);transition:all .8s ease}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+
+    .btn{
+      transition:transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+    .btn:hover{
+      transform:translateY(-3px);
+      box-shadow:0 10px 30px rgba(2,47,75,0.25);
+    }
+
+    .post{
+      transition:transform .3s ease, box-shadow .3s ease;
+    }
+    .post:hover{
+      transform:translateY(-6px);
+      box-shadow:0 18px 40px rgba(2,47,75,0.18);
+    }
+  </style>
+<link rel="stylesheet" href="./style.css">
+  <script src="./penguin.js"></script>
+</head>
+<body>
+
+<header>
+  <div id="header-placeholder"></div>
+</header>
+
+<section class="hero fade-in">
+  <div class="hero-inner">
+    <h1>Stories from the Ice</h1>
+    <p>Field notes, survival insights, and reflections from Antarctica — written for those who feel the pull of the cold.</p>
+  </div>
+</section>
+
+<section class="blog fade-in">
+  <div class="blog-grid">
+
+    <article class="post">
+      <img src="./images/Blog-1-boat.jpg" alt="ice-berg in midnight">
+      <div class="post-content">
+        <span class="tag">EXPEDITION</span>
+        <h3>What Antarctica Teaches You About Fear</h3>
+        <p>Fear behaves differently on ice. Here’s what travelers learn when silence becomes louder than doubt.</p>
+        <div class="meta">Jan 18, 2026 · 6 min read</div>
+      </div>
+    </article>
+
+    <article class="post">
+      <img src="./images/Blog-2-cold.jpg" alt="man in ice ">
+      <div class="post-content">
+        <span class="tag">PREPARATION</span>
+        <h3>How to Prepare Your Body for Extreme Cold</h3>
+        <p>From breathing techniques to thermal layering — how we prepare travelers before they meet the ice.</p>
+        <div class="meta">Dec 10, 2025 · 4 min read</div>
+      </div>
+    </article>
+
+    <article class="post">
+      <img src="./images/Blog-3-night-sky.jpeg" alt="ice-berg in night">
+      <div class="post-content">
+        <span class="tag">STORIES</span>
+        <h3>Midnight on a Glacier: A Personal Account</h3>
+        <p>A traveler’s reflection on standing beneath the Antarctic sky at midnight — guided by the Penguin.</p>
+        <div class="meta">Nov 02, 2025 · 7 min read</div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="newsletter fade-in">
+  <h2>Stay Close to the Ice</h2>
+  <p>Get expedition stories, updates, and new tour releases.</p>
+  <form>
+    <input type="email" placeholder="you@example.com" required>
+    <button class="btn btn-primary">Subscribe</button>
+  </form>
+</section>
+
+<section class="cta fade-in">
+  <h2>Read. Prepare. Then Go.</h2>
+  <p>Antarctica rewards those who respect it.</p>
+  <br>
+  <a href="./tours.html" class="btn btn-primary">Explore Tours</a>
+</section>
+
+<footer>
+  © 2026 Harshit Singh · Stories from the Ice
+</footer>
+
+<script>
+  // Scroll reveal animation
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('visible');
+      }
+    });
+  },{threshold:0.15});
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
